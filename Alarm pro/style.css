@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body, .container, .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    padding: 0 10px;
+    min-height: 100vh;
+    background: rgba(163, 204, 211, 0.134);
+    background-image: url("https://w0.peakpx.com/wallpaper/61/873/HD-wallpaper-clock-mechanism-iron-gears-watch-iron.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    width: 400px;
+    padding: 30px 30px 38px;
+    background: rgb(123, 150, 148);
+    border-radius: 50%;
+    flex-direction: column;
+    border: 10px solid  rgba(236, 114, 7, 0.867);
+    box-shadow: 0 10px 55px rgba(13, 111, 95, 0.86); 
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK70nhcoaUSuR4OQXCAzRGjhPKrarWuXKVPw&usqp=CAU);
+    background-position: center;
+}
+.container #clockImg{
+    max-width: 103px;
+}
+
+.container h1{
+    font-size: 38px;
+    font-weight:bolder;
+    margin: 30px 0;
+    color: rgb(255, 255, 255);
+}
+.column{
+    padding-left: 10px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+.container .content{
+    width: 100;
+    justify-content: space-between;
+    
+}
+
+.content .disable{
+    cursor: no-drop;
+}
+
+.content .column{
+    padding: 0 10px;
+    border-radius: 5px;
+    /* border: 1px solid rgb(40, 205, 227); */
+    width: calc(100% /3 -5px);
+}
+
+.content .disable .column{
+    opacity: 0.6;
+    pointer-events: none;
+    outline: none;
+    border: none;
+}
+.btn_container{
+    width: auto;
+}
+.btn_container :hover{
+    color: rgb(24, 126, 99);
+    font-size: larger;
+
+}
+.btn{
+    height: auto;
+    width: auto;
+    padding: 11px 22px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    font-weight:bolder;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: rgb(53, 179, 114);
+    /* background-color: rgb(16, 1, 3); */
+    /* align-items:center; */
+    justify-content: space-between;
+ 
+}
+.column .alarm_time{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: aqua;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 17px 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;    
+}
+.select{
+    padding: 10%;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.alarmList {
+    height: auto;
+    width: 50%;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(47, 161, 150);
+    border-radius: 4px;
+    color: white;
+    padding: 7px 0;    
+}
+.alarmList span{
+    margin: auto 0;
+    padding: 0px 10px;
+
+}
+.alarmList i{
+    margin: auto 7px;
+    
+}
+.deleteDiv{
+    display: flex;
+    justify-content:space-between;
+}
+/*activate clock image class*/
+.activate{
+	 width: 800px;
+	height: 110px; 
+	animation-name: clockanimation;
+	animation-duration: 0.4s;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count: infinite;
+	/* animation-delay: 5s; */
+	position: first;
+}
+
+/*animation code on clock Image*/
+@keyframes clockanimation {
+	0% {
+		transform: rotate(90deg);
+	}
+	20% {
+		transform: rotate(-90deg);
+	}
+	40% {
+		transform: rotate(90deg);
+	}
+    60% {
+		transform: rotate(-90deg);
+	}
+    80% {
+		transform: rotate(90deg);
+	}
+    100% {
+		transform: rotate(-90deg);
+	}    
+}
+
+.alarmList-container{
+    margin-top: 25px;
+    color: aliceblue;
+    font-size:medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration-line: overline;
+}
+.deleteDiv{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 200px;
+    margin-left: 200px;
+}
+/*#mode-button{
+    height: auto;
+    width: auto;
+    padding: 11px 22px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    font-weight:bolder;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: rgb(53, 179, 114);
+    /* background-color: rgb(16, 1, 3); */
+    /* align-items:center; 
+    justify-content: space-between;
+}
+.dark{
+    background-color: #222;
+    color: #e6e6e6;
+}*/
+/* Slider styling */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+}
+  
+.theme-slider {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+  
+.theme-slider input {
+    display: none;
+}
+  
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+  
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+  
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}

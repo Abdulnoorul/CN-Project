@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock by Abdul</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3185/3185722.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="container">  
+        <span class="clockanimation">
+            <img src="https://cdn-icons-png.flaticon.com/512/1571/1571824.png"  id="clockImg" alt="clock">
+        </span>
+        <h1 id="currTime">00:00:00 PM</h1>
+
+        <!-- set values for alarm -->
+        <div class="content">
+            <div class="column">
+                <select class="select " id="hour">               
+                    <option value="hours" selected hidden>Hours</option>
+                </select>
+            </div>
+            <div class="column">
+                <select class="select " id="min">
+                    <option value="minutes" selected hidden>Minutes</option>
+                </select>
+            </div>
+            <div class="column" hidden>
+                <select class="select " id="sec">
+                    <option value="00">Seconds</option>
+                </select>
+            </div>
+            <div class="column">
+                <select class="select " id="ampm">
+                    <option value="midden" selected hidden>  AM/PM </option>                
+                </select>
+            </div>
+        </div>
+
+        <!-- buttons  -->
+        <div class="btn_container">
+            <button class="btn" id="set">Set</button>   
+            <button class="btn" id="reset">Reset</button> 
+            <button class="btn" id="off">Stop</button>
+            <label class="theme-slider" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="round slider"></div>
+            </label>
+        </div>
+  
+        <!--List of Alarm  -->
+        <div class="alarmList-container" >List of Alarm</div>
+    </div>
+    <script src="script.js">
+        function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
+    </script>
+</body>
+</html>
